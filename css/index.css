@@ -11,6 +11,234 @@ body{
 input{
 	outline: none;
 }
+.fixed{
+	width: 35px;
+	height: 100%;
+	padding-top: 120px;
+	background: #383838;
+	text-align: center;
+	position: fixed;
+	top: 0;
+    right: 0;
+}
+.fixed .iconfont{
+	font-size: 20px;
+	color: #FFAA00;
+	line-height: 30px;
+}
+.oone{
+	display: block;
+	width: 29px;
+	height: 35px;
+	padding: 0 3px 5px;
+	text-align: center;
+	border-bottom: 1px solid #4D4D4D;
+	z-index: 10;
+}
+.ttwo{
+	display: block;
+	width: 29px;
+	height: 115px;
+	font-size: 16px;
+	color: #fff;
+	font-family: '隶书';
+	line-height: 22px;
+	padding: 0 3px 10px;
+	border-bottom: 1px solid #4D4D4D;
+}
+.ttwo:hover{
+	background: #FFAA01;
+}
+.ttwo .iconfont{
+	color: #fff;
+}
+.tthree{
+	display: block;
+	width: 35px;
+	height: 30px;
+	margin-bottom: 10px;
+	position: relative;	
+}
+.block{
+	width: 47px;
+	height: 30px;
+	background: #FFAA01;
+	font-size: 12px;
+	color: #383838;
+	text-align: center;
+	line-height: 30px;
+	position: absolute;
+	top: 0;
+	transition: all 1s;
+	opacity: 0;
+}
+.tthree:hover .block{
+	opacity: 1;
+	transform: translateX(-47px);
+}
+.ffour{
+	display: block;
+	width: 35px;
+	height: 30px;
+	position: relative;
+	margin-bottom: 10px;	
+}
+.block1{
+	width: 47px;
+	height: 30px;
+	background: #FFAA01;
+	font-size: 12px;
+	color: #383838;
+	text-align: center;
+	line-height: 30px;
+	position: absolute;
+	top: 0;
+	transition: all 1s;
+	opacity: 0;
+}
+.ffour:hover .block1{
+	opacity: 1;
+	transform: translateX(-47px);
+}
+.ffive{
+	display: block;
+	width: 35px;
+	height: 30px;
+	margin-bottom: 10px;
+	position: relative;	
+}
+.block2{
+	width: 47px;
+	height: 30px;
+	background: #FFAA01;
+	font-size: 12px;
+	color: #383838;
+	text-align: center;
+	line-height: 30px;
+	position: absolute;
+	top: 0;
+	transition: all 1s;
+	opacity: 0;
+}
+.ffive:hover .block2{
+	opacity: 1;
+	transform: translateX(-47px);
+}
+.ssix{
+	display: block;
+	width: 35px;
+	height: 30px;	
+	margin-bottom: 50px;
+	position: relative;
+}
+.block3{
+	width: 47px;
+	height: 30px;
+	background: #FFAA01;
+	font-size: 12px;
+	color: #383838;
+	text-align: center;
+	line-height: 30px;
+	position: absolute;
+	top: 0;
+	transition: all 1s;
+	opacity: 0;
+}
+.ssix:hover .block3{
+	opacity: 1;
+	transform: translateX(-47px);
+}
+.sseven{
+	display: block;
+	width: 35px;
+	height: 30px;	
+	margin-bottom: 5px;
+	position: relative;
+}
+.block4{
+	width: 75px;
+	height: 30px;
+	background: #FFAA01;
+	font-size: 12px;
+	color: #383838;
+	text-align: center;
+	line-height: 30px;
+	position: absolute;
+	top: 0;
+	transition: all 1s;
+	opacity: 0;
+}
+.sseven:hover .block4{
+	opacity: 1;
+	transform: translateX(-75px);
+}
+.eeight{
+	display: block;
+	width: 35px;
+	height: 30px;
+	margin-bottom: 5px;
+	position: relative;	
+}
+.block5{
+	width: 75px;
+	height: 30px;
+	background: #FFAA01;
+	font-size: 12px;
+	color: #383838;
+	text-align: center;
+	line-height: 30px;
+	position: absolute;
+	top: 0;
+	transition: all 1s;
+	opacity: 0;
+}
+.eeight:hover .block5{
+	opacity: 1;
+	transform: translateX(-75px);
+}
+.jiu{
+	display: block;
+	width: 35px;
+	height: 30px;	
+	margin-bottom: 5px;
+	position: relative;
+}
+.tten{
+	display: block;
+	width: 35px;
+	height: 30px;
+	font-size: 16px;
+	/* color: #fff;	 */
+	line-height: 25px;
+	float: left;
+	position: relative;
+}
+.block6{
+	width: 75px;
+	height: 30px;
+	background: #FFAA01;
+	font-size: 12px;
+	color: #383838;
+	text-align: center;
+	line-height: 30px;
+	position: absolute;
+	top: 0;
+	transition: all 1s;
+	opacity: 0;
+}
+.tten:hover .block6{
+	opacity: 1;
+	transform: translateX(-75px);
+}
+.tten:hover{
+	background: #FFAA00;
+}
+.fixed li:hover{
+	background: #FFAA00;
+}
+.fixed li:hover .iconfont{
+	color: #fff;
+}
 /* 头部开始 */
 .head{
 	width: 100%;
@@ -204,46 +432,37 @@ input{
 	height: 63px;
 	margin-top: 30px;
 	margin-left: 60px;
+	position: relative;
 }
 .sousuo_kuan{
-	width: 538px;
+	width: 420px;
 	height: 36px;
 	background: #fff;
 	border: 2px solid #ff6700;
 	border-right: 0;
+	padding-left: 30px;
 }
 .sousuo_left{
 	width: 28px;
 	height: 36px;
 	float: left;
 	text-align: center;
+	position: absolute;
+	top: 0;
+	left: 0;
 }
 .sousuo_left .iconfont{
-	font-size: 16px;
+	font-size: 20px;
 	color: #D5CCCC;
 	line-height: 36px;
 }
-.sousuo_center{
-	width: 380px;
-	height: 18px;
-	margin-top: 9px;
-	margin-right: 8px;
-	float: left;
-	line-height: 10px;
-}
-.sousuo_center input{
-	width: 380px;
-	height: 18px;
-	font-size: 12px;
-	color: #D5CCCC;
-	float: left;
-}
-.sousuo_right{
+.sousuo_box .sousuo_right{
 	display: block;
 	width: 118px;
-	height: 36px;
+	height: 40px;
 	background: #ff6700;
 	float: right;
+	margin-top: -40px;
 	font-size: 16px;
 	color: #fff;
 	text-align: center;
@@ -369,6 +588,8 @@ input{
 	width: 1190px;
 	height: 440px;
 	margin: 0 auto;
+	background: url('../img/banneryou.jpg') no-repeat;
+	background-position: 1000px;
 	position: relative;
 }
 .banner_zuo{
@@ -379,15 +600,15 @@ input{
 	top: 0;
 	left: -303px;
 }
-/* .banner_you{
-	width: 466px;
-	height: 440px;
+.banner_you{ 
 	position: absolute;
-	top: 0;
-	right: -320px;
-	overflow: hidden;
-	display: none;
-} */
+    width: 545px;
+    height: 440px;
+    left: 50%;
+    top: 0;
+    margin-left: 425px;
+    overflow: hidden;
+}
 /* banner左 */
 .banner_left{
 	width: 190px;
@@ -1409,6 +1630,66 @@ input{
 	width: 1190px;
 	height: 530px;
 	margin: 0 auto;
+	position: relative;
+}
+.suning .lianjie{
+	width: 68px;	
+	height: 288px;	
+	padding-top: 9px;
+	border: 1px solid #DDDDDD;
+	background: #F8F8F8;
+	position: fixed;
+	top: 50%;
+    left: 50%;
+    right: auto;
+    margin-left: -670px;
+    margin-top: -159.5px;
+	z-index: 99999;
+}
+.lianjie .he{
+	width: 68px;	
+	height: 29px;	
+	border-bottom: 1px solid #E8E8E8;
+}
+.lianjie .he a{
+	display: block;
+	width: 100%;	
+	height: 100%;	
+	font-size: 12px;
+	text-align: center;
+	line-height: 30px;
+	color: #333;
+}
+.lianjie .he a:hover{
+	background: #FF9900;
+	color: #fff;
+}
+.lianjie .top{
+	width: 68px;	
+	height: 18px;	
+	background: #F2F2F2;
+}
+.lianjie .top a{
+	display: block;
+	width: 100%;	
+	height: 100%;
+	font-size: 10px;
+	font-family: "楷体";
+	color: #333;
+	text-align: center;
+	line-height: 18px;	
+}
+.lianjie .bei{
+	width: 45px;
+	height: 37px;
+	background: url('../img/beijinf.jpg') no-repeat;
+	background-position: -303px -81px;
+	position: absolute;
+	top: -30px;
+	left: 0;
+	right: 0;
+	margin-left: auto;
+	margin-right: auto;
 }
 .suning_left{
 	width: 800px;

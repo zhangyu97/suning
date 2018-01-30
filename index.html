@@ -7,16 +7,13 @@
 	<link rel="stylesheet" href="css/index.css">
 	<link rel="stylesheet" href="css/base.css">
 	<link rel="shortcut icon" href="img/logo.icon">
-	<script src="css/dome.js"></script>
+	<script src="js/dome.js"></script>
+	<script src="js/animate.js"></script>
 </head>
 <body>
 	<div class="fixed">
 		<ul>
-			<li>
-				<a href="" class="oone">
-					<i class="iconfont">&#xe613;</i>
-				</a>
-			</li>
+			<li><a href="" class="oone"><i class="iconfont">&#xe613;</i></a></li>
 			<li><a href="" class="ttwo"><i class="iconfont">&#xe64a;</i>购物车(0)</a></li>
 			<li><a href="" class="tthree"><i class="iconfont">&#xe664;</i><div class="block">消息</div></a></li>
 			<li><a href="" class="ffour"><i class="iconfont">&#xe60f;</i><div class="block1">理财</div></a></li>
@@ -326,7 +323,7 @@
 					</li>
 				</ul>
 				<ul class="banner_center">
-					<li class="active"><a href=""><img src="img/banner8.jpg" alt=""></a></li>
+					<li class="active z"><a href=""><img src="img/banner8.jpg" alt=""></a></li>
 					<li><a href=""><img src="img/banner2.jpg" alt=""></a></li>
 					<li><a href=""><img src="img/banner3.jpg" alt=""></a></li>
 					<li><a href=""><img src="img/banner4.jpg" alt=""></a></li>
@@ -335,14 +332,14 @@
 					<li><a href=""><img src="img/banner7.jpg" alt=""></a></li>
 					<li><a href=""><img src="img/banner1.jpg" alt=""></a></li>
 					<div class="banner_dian">
-						<a href="" class="button"></a>
-						<a href="" class="button"></a>
-						<a href="" class="button"></a>
-						<a href="" class="button"></a>
-						<a href="" class="button"></a>
-						<a href="" class="button"></a>
-						<a href="" class="button"></a>
-						<a href="" class="button"></a>
+						<span class="button active"></span>
+						<span class="button"></span>
+						<span class="button"></span>
+						<span class="button"></span>
+						<span class="button"></span>
+						<span class="button"></span>
+						<span class="button"></span>
+						<span class="button"></span>
 					</div>
 					<div class="center_left">
 						<a href="" class="center_top" title="企业采购季">
@@ -356,12 +353,12 @@
 							<img src="img/banner10.jpg" alt="">
 						</a>
 					</div>
-					<a href="" class="zuojian">
+					<div class="zuojian">
 						<i class="iconfont">&#xe604;</i>
-					</a>
-					<a href="" class="youjian">
+					</div>
+					<div class="youjian">
 						<i class="iconfont">&#xe605;</i>
-					</a>
+					</div>
 				</ul>
 				<div class="banner_right">
 					<div class="right_top">
@@ -440,9 +437,9 @@
 				<span>大聚惠</span>
 				<span>有道理的便宜</span>
 			</div>
-			<a href="" class="jinri">
+			<a href="" class="jinri active">
 				<i class="iconfont">&#xe60c;</i>
-				<span class="jinri_word">今日聚惠</span>
+				<span class="jinri_word ">今日聚惠</span>
 			</a>
 			<a href="" class="yeshi">
 				<i class="iconfont">&#xe607;</i>
@@ -456,6 +453,88 @@
 			</a>
 		</div>
 		<div class="juhui_bottom">
+			<ul class="bottom_five active">
+				<li>
+					<a href="" class="five_box" title="飞利浦（Philips）空气净化器 AC2880家用卧室去甲醛除雾霾杀菌PM2.5二手烟异味">
+						<div class="five_top">
+							<img src="img/juhui1.jpg" alt="">
+						</div>
+						<div class="five_shu"></div>
+						<div class="five_center">
+							<p>飞利浦（Philips）空气净化器 AC2880家用卧室去甲醛除雾</p>
+						</div>
+						<div class="five_jiage">
+							<span>￥1799.00</span>
+							<span>￥2999.00</span>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="" class="five_box" title="达利园八宝粥桂圆莲子粥360g*12箱装 方便粥">
+						<div class="five_top">
+							<img src="img/juhui2.jpg" alt="">
+						</div>
+						<div class="five_shu"></div>
+						<div class="five_center">
+							<p>达利园八宝粥桂圆莲子粥360g*12箱装 方便粥</p>
+						</div>
+						<div class="five_jiage">
+							<span>￥35.90</span>
+							<span>￥39.90</span>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="" class="five_box" title="飞利浦（Philips）空气净化器AC3252家用室内卧室办公室除甲醛雾霾烟尘PM2.5">
+						<div class="five_top">
+							<img src="img/juhui3.jpg" alt="">
+						</div>
+						<div class="five_shu"></div>
+						<div class="five_center">
+							<p>飞利浦（Philips）空气净化器AC3252家用室内卧室办公室</p>
+						</div>
+						<div class="five_jiage">
+							<span>￥2699.00</span>
+							<span>￥4999.00</span>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="" class="five_box" title="老干妈 风味豆豉280g">
+						<div class="five_top">
+							<img src="img/juhui4.jpg" alt="">
+						</div>
+						<div class="five_shu"></div>
+						<div class="five_center">
+							<p>老干妈 风味豆豉280g</p>
+						</div>
+						<div class="five_jiage">
+							<span>￥7.9</span>
+							<span>￥8.6</span>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="" class="five_box" title="森林大叔每日坚果成人8种原味零食混合坚果仁干果食品礼包780克">
+						<div class="five_top">
+							<img src="img/juhui5.jpg" alt="">
+						</div>
+						<div class="five_center">
+							<p>森林大叔每日坚果成人8种原味零食混合坚果仁干果食品礼</p>
+						</div>
+						<div class="five_jiage">
+							<span>￥138.00</span>
+							<span>￥158.00</span>
+						</div>
+					</a>
+				</li>
+				<a href="" class="juhui_zuojian juhui_jian">
+					<i class="iconfont juhui_i">&#xe604;</i>
+				</a>
+				<a href="" class="juhui_youjian juhui_jian">
+					<i class="iconfont juhui_i">&#xe605;</i>
+				</a>
+			</ul>
 			<ul class="bottom_five">
 				<li>
 					<a href="" class="five_box" title="飞利浦（Philips）空气净化器 AC2880家用卧室去甲醛除雾霾杀菌PM2.5二手烟异味">

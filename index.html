@@ -442,6 +442,32 @@
 		</div>
 	</div>
 <!-- banner结束 -->
+<!--隐藏搜索框开始-->
+	<div class="hidden">
+		<div class="hidden_cen">
+			<div class="hidden_left">
+				<i class="iconfont">&#xe845;</i>
+				<span>全部商品分类</span>
+			</div>
+			<div class="hidden_box">
+				<input type="text" class="hidden_kuan" placeholder="跨年倒计时 家电满额送空净">
+				<div class="hidden_ss">
+					<i class="iconfont">&#xe600;</i>
+				</div>
+				<input type="button" value="搜索" class="hidden_suo">
+			</div>
+			<div class="denglu_hidden">
+				<a href="">请登录</a>
+				<a href="">注册有礼</a>
+			</div>
+			<div class="my_hidden">
+				<i class="iconfont icon2">&#xe609;</i>
+				<a href="" class="hidden_gouwu">购物车 0</a>
+				<i class="iconfont">&#xe61a;</i>
+			</div>
+		</div>
+	</div>
+<!--隐藏搜索框结束-->
 <!-- 聚惠开始 -->
 	<div class="juhui">
 		<div class="juhui_top">
@@ -1656,7 +1682,7 @@
 	</div>
 <!-- 家用电器结束 -->
 <!-- 图片墙2开始 -->
-	<div class="tupian floor">
+	<div class="tupian">
 		<a href="" class="tupian_box" title="家装"><img src="img/tupian.jpg" alt=""></a>
 		<a href="" class="tupian_box" title="钟表钜惠"><img src="img/tupian2.jpg" alt=""></a>
 		<a href="" class="tupian_box" title="空调 以旧换新"><img src="img/tupian3.jpg" alt=""></a>
@@ -2430,7 +2456,6 @@
 	</div>
 <!-- 母婴结束 -->
 <!-- 服装开始 -->
-	<a name="fu"></a>
 	<div class="shuma floor">
 		<div class="shuma_box">
 			<div class="shouji_top fuzhuang_top">
@@ -3729,47 +3754,6 @@
 <!-- 苏宁结束 -->
 </body>
 </html>
-<script>
-    // 楼层跳转
-    // 返回顶部
-    let back = document.querySelector(".tten .top");
-    console.log(back);
-    back.onclick =function () {
-        animate(document.body,{scrollTop:0},5000);
-        animate(document.documentElement,{scrollTop:0},5000);
-    }
-    // 获取页面的高度
-    let height = document.documentElement.clientHeight;
-    console.log(height);
-    window.onscroll = function (){
-        // 获取要跳转的每个楼层
-        let floor = document.querySelectorAll(".floor");
-        console.log(floor);
-        // 获取楼层按钮
-        let lianjie = document.querySelectorAll(".lianjie ul li.he");
-        console.log(lianjie);
-        let tops = document.body.scrollTop? document.body.scrollTop:document.documentElement.scrollTop;
-        floor.forEach(function (fv,fi) {
-            // 滚动条的高度>=楼层距离窗口高度；
-            if(tops>=fv.offsetTop-height+100){
-                lianjie.forEach(function (lv,li) {
-                    lv.classList.remove("active");
-                })
-                lianjie[fi].classList.add("active");
-            }
-        })
-        // 要出现的楼层跳转，遍历lianjie
-        lianjie.forEach(function (liv,lii) {
-            liv.onclick = function () {
-                // 保存一下值连接
-                let bao = floor[lii].offsetTop;
-                animate(document.body,{scrollTop:bao},100);
-                animate(document.documentElement,{scrollTop:bao},100);
-            }
-        })
-    }
-
-</script>
 
 
 

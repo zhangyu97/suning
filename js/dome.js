@@ -4,7 +4,7 @@
         let ban = document.querySelector(".banner");
         let banimg = document.querySelectorAll(".banner_center li");
         let btn = document.querySelectorAll(".banner_dian span.button");
-        console.log(btn);
+        // console.log(btn);
         let left = document.querySelector('.banner_center .zuojian');
         let right = document.querySelector('.banner_center .youjian');
         let t = 0;
@@ -69,5 +69,50 @@
                 flag = true;
             })
         })
-    }
+    // banner侧导航
+        let cenav = document.querySelectorAll(".banner_left .br_word");
+        // console.log(cenav);
+        let non = document.querySelectorAll(".none_nn")
+        cenav.forEach(function (dom,xia) {
+            dom.onmousemove = function () {
+                cenav.forEach(function (vv,ii) {
+                    vv.classList.remove("active");
+                    non[ii].classList.remove("active");
+                })
+                cenav[xia].classList.add("active");
+                non[xia].classList.add("active");
+                non[xia].classList.add("ji");
+            }
+            dom.onmouseout = function () {
+                cenav.forEach(function (vv,ii) {
+                    vv.classList.remove("active");
+                    non[ii].classList.remove("active");
+                })
+                cenav[xia].classList.remove("active");
+                non[xia].classList.remove("active");
+            }
+        })
 
+    // 今日聚惠
+    let ju = document.querySelectorAll(".juhui_top .jin_bb .jj");
+    console.log(ju);
+    let today = document.querySelectorAll(".juhui_bottom ul.bottom_five");
+    console.log(today);
+    ju.forEach(function (vvv,xas) {
+        vvv.onmousemove = function () {
+            ju.forEach(function (vaa,inn) {
+                vaa.classList.remove("active");
+                today[inn].classList.remove("active");
+            })
+            ju[xas].classList.add("active");
+            today[xas].classList.add("active");
+        }
+    })
+    // let l_jian = document.querySelector(".juhui_zuojian");
+    // console.log(l_jian);
+    // let r_jian = document.querySelector(".juhui_youjian");
+    // console.log(r_jian);
+
+
+
+    }

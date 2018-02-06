@@ -1,6 +1,75 @@
 
     window.onload = function (){
-    // banner
+// 导航
+        let wangzhan = document.querySelector(".wangzhan");
+        let no = document.querySelector(".no");
+        let shangjia =document.querySelector(".shangjia");
+        let shan = document.querySelector(".shan");
+        let kefu = document.querySelector(".kefu");
+        let ke = document.querySelector(".ke");
+        // let dizhi = document.querySelector(".dizhi");
+        // let dizhi_box = document.querySelector(".dizhi_box");
+        // let iconfont = document.querySelector(".icon5");
+        // console.log(iconfont)
+        let dingdang = document.querySelector(".dingdang")
+        let ding_dang = document.querySelector(".ding_dang");
+        let yigou = document.querySelector(".yigou");
+        let yigou_box = document.querySelector(".yigou_box");
+        let gouwu = document.querySelector(".gouwu")
+        let gouwu_boxx = document.querySelector(".gouwu_boxx");
+        let phone =document.querySelector(".phone");
+        let phone_box = document.querySelector(".phone_box");
+        wangzhan.onmousemove = function () {
+            animate(no,{height:240,overflow:"none",border:"1px solid #ccc",borderTop:"none"},200)
+        }
+        wangzhan.onmouseout = function () {
+            animate(no,{height:0,overflow:"hidden",border:"none"},200)
+        }
+        shangjia.onmousemove = function () {
+            animate(shan,{height:122,overflow:"none",border:"1px solid #ccc",borderTop:"none"},200)
+        }
+        shangjia.onmouseout = function () {
+            animate(shan,{height:0,overflow:"hidden",border:"none"},200)
+        }
+        kefu.onmousemove = function () {
+            animate(ke,{height:122,overflow:"none",border:"1px solid #ccc",borderTop:"none"},200)
+        }
+        kefu.onmouseout = function () {
+            animate(ke,{height:0,overflow:"hidden",border:"none"},200)
+        }
+        // dizhi.onclick = function () {
+        //     dizhi.style.background ="#fff";
+        //     animate(dizhi_box,{height:133,overflow:"none",border:"none"},200)
+        // }
+        // iconfont.onclick = function () {
+        //     animate(dizhi_box,{height:0,overflow:"hidden",border:"none"},200)
+        // }
+        dingdang.onmousemove = function () {
+            animate(ding_dang,{height:120,overflow:"none",border:"1px solid #ccc",borderTop:"none"},200)
+        }
+        dingdang.onmouseout = function () {
+            animate(ding_dang,{height:0,overflow:"hidden",border:"none"},200)
+        }
+        yigou.onmousemove = function () {
+            animate(yigou_box,{height:156,overflow:"none",border:"1px solid #ccc",borderTop:"none"},200)
+        }
+        yigou.onmouseout = function () {
+            animate(yigou_box,{height:0,overflow:"hidden",border:"none"},200)
+        }
+        gouwu.onmousemove = function () {
+            animate(gouwu_boxx,{height:400,overflow:"none",border:"1px solid #ccc",borderTop:"none"},200)
+        }
+        gouwu.onmouseout = function () {
+            animate(gouwu_boxx,{height:0,overflow:"hidden",border:"none"},200)
+        }
+        phone.onmousemove = function () {
+            animate(phone_box,{height:220,overflow:"none",border:"1px solid #ccc",borderTop:"none"},200)
+        }
+        phone.onmouseout = function () {
+            animate(phone_box,{height:0,overflow:"hidden",border:"none"},200)
+        }
+
+// banner
         let ban = document.querySelector(".banner");
         let banimg = document.querySelectorAll(".banner_center li");
         let btn = document.querySelectorAll(".banner_dian span.button");
@@ -93,7 +162,7 @@
             }
         })
 
-    // 今日聚惠
+// 今日聚惠
     let ju = document.querySelectorAll(".juhui_top .jin_bb .jj");
     console.log(ju);
     let today = document.querySelectorAll(".juhui_bottom ul.bottom_five");
@@ -108,10 +177,61 @@
             today[xas].classList.add("active");
         }
     })
-    // let l_jian = document.querySelector(".juhui_zuojian");
-    // console.log(l_jian);
-    // let r_jian = document.querySelector(".juhui_youjian");
-    // console.log(r_jian);
+//     排行榜
+        let haohuo_box = document.querySelector(".haohuo_box1")
+        let paihan = document.querySelectorAll(".paihan_bottom");
+        console.log(paihan);
+        let paibutton = document.querySelectorAll(".bottom_button .buttonbb");
+        console.log(paibutton);
+        let now = 0;
+        let next = 0;
+        let width = parseInt(getComputedStyle(haohuo_box,null).width);
+        function pai() {
+            next = now+1;
+            if(next>=paihan.length){
+                next =0;
+            }
+            paihan[next].style.left = "100%";
+            animate(paihan[now],{left:-width},200);
+            animate(paihan[next],{left:0},200);
+            paibutton[now].classList.remove("active");
+            paibutton[next].classList.add("active");
+            now = next;
+        }
+        let shi = setInterval(pai,2000);
+        let rig = document.querySelector(".paihan_right");
+        let lef = document.querySelector(".paihan_left");
+        haohuo_box.onmouseenter= function () {
+            clearInterval(shi);
+        }
+        haohuo_box.onmouseleave= function () {
+            clearInterval(shi);
+        }
+        rig.onclick =function () {
+            pai();
+        }
+        lef.onclick = function () {
+            next = now -1;
+            if(next <0){
+                next = paihan.length-1;
+            }
+            paihan[next].style.left = "-100%";
+            animate(paihan[now],{left:width},200);
+            animate(paihan[next],{left:0},200);
+            paibutton[now].classList.remove("active");
+            paibutton[next].classList.add("active");
+            now = next;
+        }
+        paibutton.forEach(function (pa,biao) {
+            pa.onclick =function () {
+                paibutton.forEach(function (pai,bi) {
+                    pai.classList.remove("active");
+                    animate(paihan[now], {left: width},200);
+                })
+                paibutton[biao].classList.add("active");
+                animate(paihan[next],{left:0},200);
+            }
+        })
         // 楼层跳转
         // 返回顶部
         let back = document.querySelector(".tten");
@@ -183,7 +303,24 @@
                 }
             })
         }
-
-
+// 视频
+//         let wid = document.querySelector(".boot").offsetWidth;
+//         console.log(wid);
+//         let shipin =document.querySelector(".shiping_bottom");
+//         let shipin_box = document.querySelectorAll(".boot");
+//         function video() {
+//             animate(shipin,{left:-wid},500,function (){
+//                 let one = shipin.firstElementChild;
+//                 shipin.appendChild(one);
+//                 shipin.style.left=0;
+//             })
+//         }
+//         let ti = setInterval(video,1000);
+//         shipin.onmouseenter= function () {
+//             clearInterval(ti);
+//         }
+//         shipin.onmouseleave = function () {
+//             ti = setInterval(video,1000)
+//         }
 
     }

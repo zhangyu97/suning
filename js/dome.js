@@ -1,74 +1,93 @@
 
     window.onload = function (){
-// 导航
-        let wangzhan = document.querySelector(".wangzhan");
-        let no = document.querySelector(".no");
-        let shangjia =document.querySelector(".shangjia");
-        let shan = document.querySelector(".shan");
-        let kefu = document.querySelector(".kefu");
-        let ke = document.querySelector(".ke");
-        // let dizhi = document.querySelector(".dizhi");
-        // let dizhi_box = document.querySelector(".dizhi_box");
-        // let iconfont = document.querySelector(".icon5");
-        // console.log(iconfont)
-        let dingdang = document.querySelector(".dingdang")
-        let ding_dang = document.querySelector(".ding_dang");
-        let yigou = document.querySelector(".yigou");
-        let yigou_box = document.querySelector(".yigou_box");
-        let gouwu = document.querySelector(".gouwu")
-        let gouwu_boxx = document.querySelector(".gouwu_boxx");
-        let phone =document.querySelector(".phone");
-        let phone_box = document.querySelector(".phone_box");
-        wangzhan.onmousemove = function () {
-            animate(no,{height:240,overflow:"none",border:"1px solid #ccc",borderTop:"none"},200)
-        }
-        wangzhan.onmouseout = function () {
-            animate(no,{height:0,overflow:"hidden",border:"none"},200)
-        }
-        shangjia.onmousemove = function () {
-            animate(shan,{height:122,overflow:"none",border:"1px solid #ccc",borderTop:"none"},200)
-        }
-        shangjia.onmouseout = function () {
-            animate(shan,{height:0,overflow:"hidden",border:"none"},200)
-        }
-        kefu.onmousemove = function () {
-            animate(ke,{height:122,overflow:"none",border:"1px solid #ccc",borderTop:"none"},200)
-        }
-        kefu.onmouseout = function () {
-            animate(ke,{height:0,overflow:"hidden",border:"none"},200)
-        }
-        // dizhi.onclick = function () {
-        //     dizhi.style.background ="#fff";
-        //     animate(dizhi_box,{height:133,overflow:"none",border:"none"},200)
-        // }
-        // iconfont.onclick = function () {
-        //     animate(dizhi_box,{height:0,overflow:"hidden",border:"none"},200)
-        // }
-        dingdang.onmousemove = function () {
-            animate(ding_dang,{height:120,overflow:"none",border:"1px solid #ccc",borderTop:"none"},200)
-        }
-        dingdang.onmouseout = function () {
-            animate(ding_dang,{height:0,overflow:"hidden",border:"none"},200)
-        }
-        yigou.onmousemove = function () {
-            animate(yigou_box,{height:156,overflow:"none",border:"1px solid #ccc",borderTop:"none"},200)
-        }
-        yigou.onmouseout = function () {
-            animate(yigou_box,{height:0,overflow:"hidden",border:"none"},200)
-        }
-        gouwu.onmousemove = function () {
-            animate(gouwu_boxx,{height:400,overflow:"none",border:"1px solid #ccc",borderTop:"none"},200)
-        }
-        gouwu.onmouseout = function () {
-            animate(gouwu_boxx,{height:0,overflow:"hidden",border:"none"},200)
-        }
-        phone.onmousemove = function () {
-            animate(phone_box,{height:220,overflow:"none",border:"1px solid #ccc",borderTop:"none"},200)
-        }
-        phone.onmouseout = function () {
-            animate(phone_box,{height:0,overflow:"hidden",border:"none"},200)
-        }
+// 侧导航
+        let fiexd = document.querySelectorAll(".fixed ul li.si");
+        console.log(fiexd);
+        let block = document.querySelectorAll(".si .block");
+        console.log(block);
+        fiexd.forEach(function (val,ccc) {
+            val.onmouseenter = function () {
+                fiexd.forEach(function (vv,iii) {
+                    val.classList.add("active");
+                    animate(block[ccc],{left:-47},500);
+                })
+            }
+            val.onmouseleave = function () {
+                val.classList.remove("active");
+                fiexd.forEach(function (vv,iii) {
+                    animate(block[ccc],{left:0},500);
+                })
+            }
+        })
+        let three = document.querySelectorAll(".fixed ul li.san");
+        let bl = document.querySelectorAll(".block1");
+        three.forEach(function (vall,indd) {
+            vall.onmouseenter = function () {
+                three.forEach(function (zh,xii) {
+                    vall.classList.add("active")
+                    animate(bl[indd],{left:-75},500);
 
+                })
+            }
+            vall.onmouseleave = function () {
+                vall.classList.remove("active")
+                three.forEach(function (zh,xii) {
+                    animate(bl[indd],{left:0},500);
+
+                })
+            }
+        })
+// 导航开始
+        let shan = document.querySelectorAll(".hd_left .shan");
+        let hid1 = document.querySelectorAll(".hidden1");
+        shan.forEach(function (dom,xi) {
+            dom.onmouseenter = function () {
+                shan.forEach(function (zhi,biao) {
+                    if(hid1.length.height ==140){
+                        animate(hid1[xi],{height:140,border:"1px solid #ccc",display:"block"},60);
+                    }else if(hid1.length.height =240){
+                        animate(hid1[xi],{height:240,border:"1px solid #ccc",display:"block"},60);
+                    }
+
+                })
+            }
+            dom.onmouseleave = function () {
+                shan.forEach(function (zhi,biao) {
+                    zhi.classList.remove("active");
+                    animate(hid1[xi],{height:0,border:"none",display:"none"},60);
+                })
+            }
+        })
+//   右边
+        let wo = document.querySelectorAll(".my.choice");
+        let hidd2 = document.querySelectorAll(".hiddenz");
+        wo.forEach(function (value,index) {
+            value.onmouseenter = function () {
+                wo.forEach(function (vaa,inn) {
+                    vaa.classList.remove("active");
+                    animate(hidd2[index],{height:220,border:"1px solid #ccc",display:"block"},60);
+                })
+            }
+            // wo.onmouseenter = function () {
+            //     animate(hidden[0],{height:120,border:"1px solid #ccc",display:"block"},60);
+            // }
+            // wo.onmouseenter = function () {
+            //     animate(hidden[1],{height:156,border:"1px solid #ccc",display:"block"},60);
+            // }
+            // wo.onmouseenter = function () {
+            //     animate(hidden[2],{height:120,border:"1px solid #ccc",display:"block"},60);
+            // }
+            // wo.onmouseenter = function () {
+            //     animate(hidden[3],{height:220,border:"1px solid #ccc",display:"block"},60);
+            // }
+            value.onmouseleave = function () {
+                wo.forEach(function (vaa,inn) {
+                    vaa.classList.remove("active");
+                    animate(hidd2[index],{height:0,border:"none",display:"none"},60);
+                })
+            }
+        })
+// 导航结束
 // banner
         let ban = document.querySelector(".banner");
         let banimg = document.querySelectorAll(".banner_center li");
@@ -140,7 +159,6 @@
         })
     // banner侧导航
         let cenav = document.querySelectorAll(".banner_left .br_word");
-        // console.log(cenav);
         let non = document.querySelectorAll(".none_nn")
         cenav.forEach(function (dom,xia) {
             dom.onmousemove = function () {
@@ -164,9 +182,7 @@
 
 // 今日聚惠
     let ju = document.querySelectorAll(".juhui_top .jin_bb .jj");
-    console.log(ju);
     let today = document.querySelectorAll(".juhui_bottom ul.bottom_five");
-    console.log(today);
     ju.forEach(function (vvv,xas) {
         vvv.onmousemove = function () {
             ju.forEach(function (vaa,inn) {
@@ -180,9 +196,7 @@
 //     排行榜
         let haohuo_box = document.querySelector(".haohuo_box1")
         let paihan = document.querySelectorAll(".paihan_bottom");
-        console.log(paihan);
         let paibutton = document.querySelectorAll(".bottom_button .buttonbb");
-        console.log(paibutton);
         let now = 0;
         let next = 0;
         let width = parseInt(getComputedStyle(haohuo_box,null).width);
@@ -235,13 +249,12 @@
         // 楼层跳转
         // 返回顶部
         let back = document.querySelector(".tten");
-        back.onclick =function () {
-            animate(document.body,{scrollTop:0},500);
-            animate(document.documentElement,{scrollTop:0},500);
-        }
+        // back.onclick =function () {
+        //     animate(document.body,{scrollTop:0},500);
+        //     animate(document.documentElement,{scrollTop:0},500);
+        // }
         let lian =document.querySelector(".lianjie");
         lian.style.display="none";
-        console.log(lian);
         let flag1 = true;
         let flag2 =true;
         // 获取页面的高度
@@ -255,6 +268,7 @@
             let banhe = document.querySelector(".juhui");
             // 获取hidden
             let hidden = document.querySelector(".hidden");
+            console.log(hidden)
             // 获取链接出现是位置
             let su = document.querySelector(".suning");
             let tops = document.body.scrollTop? document.body.scrollTop:document.documentElement.scrollTop;
@@ -304,23 +318,43 @@
             })
         }
 // 视频
-//         let wid = document.querySelector(".boot").offsetWidth;
-//         console.log(wid);
-//         let shipin =document.querySelector(".shiping_bottom");
-//         let shipin_box = document.querySelectorAll(".boot");
-//         function video() {
-//             animate(shipin,{left:-wid},500,function (){
-//                 let one = shipin.firstElementChild;
-//                 shipin.appendChild(one);
-//                 shipin.style.left=0;
-//             })
-//         }
-//         let ti = setInterval(video,1000);
-//         shipin.onmouseenter= function () {
-//             clearInterval(ti);
-//         }
-//         shipin.onmouseleave = function () {
-//             ti = setInterval(video,1000)
-//         }
+        let video_box=document.querySelector('.video_box ul');
+        let vlist=document.querySelectorAll('.video_box ul li');
+        let vleft=document.querySelector('.video_box  .left_zou');
+        let vright=document.querySelector('.video_box  .right_you');
+        let w=video_box.parentNode.offsetWidth;
+        let vadios=document.querySelectorAll('.video a');
+        function shiping(){
+            animate(video_box,{left:-w}, 1000,function(){
+                // let i=0;
+                for(let i=0;i<3;i++){
+                    let first=video_box.firstElementChild;
+                    video_box.appendChild(first);
+                }
+                video_box.style.left=0;
 
+            })
+        }
+        vright.onclick=function(){
+            shiping()
+
+        }
+        vlist.forEach(function(value,index){
+            value.onmousemove=function(){
+                vadios.forEach(function(v,i){
+                    v.classList.remove('active');
+                })
+                vadios[index].classList.add('active');
+            }
+        })
+        vleft.onclick=function(){
+            video_box.style.left=-w+'px';
+            for(let i=0;i<3;i++){
+                let first=video_box.firstElementChild;
+                let last=video_box.lastChild;
+                video_box.insertBefore(last, first);
+
+            }
+            animate(video_box,{left:0}, 1000)
+        }
     }
